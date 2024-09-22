@@ -1,48 +1,71 @@
-<!DOCTYPE html> 
-<html> 
-<body bgcolor="#00000"> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deep Confessions Podcast</title>
+    <script src="https://cdn.fluidplayer.com/v3/current/fluidplayer.min.js"></script>
+    <style>
+        body {
+            background-color: #000000;
+            color: white;
+            font-family: Verdana, sans-serif;
+            text-align: center;
+        }
+        video {
+            width: 100%;
+            max-width: 720px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
 
+    <h2>Deep Confessions Podcast - Leith Boulares</h2>
+    <video id="leith" controls>
+        <source src="https://ba9chich.media/hls/74d0debe401f931a1e1c0f441a88da6e122a4d871c2e5535574327b5e63193b7/master.m3u8" type="application/x-mpegURL" />
+    </video>
 
-<script src="https://cdn.fluidplayer.com/v3/current/fluidplayer.min.js"></script>
-<div align="center">
-<h2> <font face="verdana" color="white" >Deep Confessions Podcast - Leith Boulares</font></h2></br>
-<div>
-<video id="video-id">
-<source src="https://ba9chich.media/hls/74d0debe401f931a1e1c0f441a88da6e122a4d871c2e5535574327b5e63193b7/720/playlist.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyLUFnZW50IjoiTW96aWxsYS81LjAgKFdpbmRvd3MgTlQgMTAuMDsgV2luNjQ7IHg2NDsgcnY6MTMwLjApIEdlY2tvLzIwMTAwMTAxIEZpcmVmb3gvMTMwLjAiLCJBY2NlcHQiOiIqLyoiLCJIb3N0IjoiYmE5Y2hpY2gubWVkaWEiLCJPcmlnaW4iOiJodHRwczovL2JhOWNoaWNoLmNvbSIsIlJlZmVyZXIiOiJodHRwczovL2JhOWNoaWNoLmNvbS8iLCJYLUZvcndhcmRlZC1Gb3IiOiIxOTcuMjcuMTE1LjQzLCAxNzIuNjkuMjIyLjMiLCJJUC1BZGRyZXNzIjoiMTk3LjI3LjExNS40MyJ9.r8eAhYF7dBoRaDYbgyCQA0J1PG6QKaZQ2k5XVCl6OTs" type="application/x-mpegURL" /></div></div>
-<script>
-    var myFP = fluidPlayer(
-        'video-id',	{
-	"layoutControls": {
-		"controlBar": {
-			"autoHideTimeout": 3,
-			"animated": true,
-			"autoHide": true
-		},
-		"htmlOnPauseBlock": {
-			"html": null,
-			"height": null,
-			"width": null
-		},
-		"autoPlay": false,
-		"mute": false,
-		"allowTheatre": true,
-		"playPauseAnimation": false,
-		"playbackRateEnabled": false,
-		"allowDownload": false,
-		"playButtonShowing": false,
-		"fillToContainer": true,
-		"posterImage": "https://i.ytimg.com/vi/fMV3S0f9RL4/hq720.jpg"
-	},
-	"vastOptions": {
-		"adList": [],
-		"adCTAText": false,
-		"adCTATextPosition": ""
-	}
-});
-</script>
+    <h2>Deep Confessions Podcast - Hamza Bouchnak </h2>
+    <video id="hamza" controls>
+        <source src="https://ba9chich.media/hls/af04a3f351fcd13bdfcf3051997420b229ae2d4285bf89ed0d6c0b38ce6402e4/master.m3u8" type="application/x-mpegURL" />
+    </video>
 
+    <script>
+        var myFPLeith = fluidPlayer('leith', {
+            layoutControls: {
+                autoHideTimeout: 3,
+                animated: true,
+                autoHide: true,
+                autoPlay: false,
+                mute: true,
+                allowTheatre: true,
+                playPauseAnimation: false,
+                playbackRateEnabled: false,
+                allowDownload: false,
+                playButtonShowing: false,
+                fillToContainer: true,
+                posterImage: "https://i.ytimg.com/vi/fMV3S0f9RL4/hq720.jpg"
+            }
+        });
 
+        var myFPHamza = fluidPlayer('hamza', {
+            layoutControls: {
+                autoHideTimeout: 3,
+                animated: true,
+                autoHide: true,
+                autoPlay: false,
+                mute: true,
+                allowTheatre: true,
+                playPauseAnimation: false,
+                playbackRateEnabled: false,
+                allowDownload: false,
+                playButtonShowing: false,
+                fillToContainer: true,
+                posterImage: "https://i.ytimg.com/vi/eOy6aj012uQ/hq720.jpg"
+            }
+        });
+    </script>
 
-</body> 
+</body>
 </html>
-
