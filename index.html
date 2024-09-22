@@ -11,29 +11,48 @@
             color: white;
             font-family: Verdana, sans-serif;
             text-align: center;
+            margin: 0;
+            padding: 20px;
         }
-        
+        .video-container {
+            width: 80%; /* Adjust width as needed */
+            max-width: 800px; /* Max width for larger screens */
+            margin: 0 auto;
+        }
+        video {
+            width: 100%; /* Make video responsive */
+            height: auto; /* Maintain aspect ratio */
+        }
     </style>
 </head>
 <body>
-	
     <h2>Deep Confessions Podcast - Leith Boulares</h2>
-    <div class="container" align="center">
-    <video id="leith">
-        <source src="https://ba9chich.media/hls/74d0debe401f931a1e1c0f441a88da6e122a4d871c2e5535574327b5e63193b7/master.m3u8" type="application/x-mpegURL" />
-    </video></div>
-    <h2>Deep Confessions Podcast - Hamza Bouchnak </h2>
-    <div class="container" align="center">
-    <video id="hamza">
-        <source src="https://ba9chich.media/hls/af04a3f351fcd13bdfcf3051997420b229ae2d4285bf89ed0d6c0b38ce6402e4/master.m3u8" type="application/x-mpegURL" />
-    </video><div class="container">
+    <div class="video-container">
+        <video id="leith">
+            <source src="https://ba9chich.media/hls/74d0debe401f931a1e1c0f441a88da6e122a4d871c2e5535574327b5e63193b7/master.m3u8" type="application/x-mpegURL" />
+        </video>
+    </div>
+
+    <h2>Deep Confessions Podcast - Hamza Bouchnak</h2>
+    <div class="video-container">
+        <video id="hamza">
+            <source src="https://ba9chich.media/hls/af04a3f351fcd13bdfcf3051997420b229ae2d4285bf89ed0d6c0b38ce6402e4/master.m3u8" type="application/x-mpegURL" />
+        </video>
+    </div>
 
     <script>
-        var myFPLeith = fluidPlayer('leith', {
+        var myFLeith = fluidPlayer('leith', {
             layoutControls: {
-                autoHideTimeout: 3,
-                animated: true,
-                autoHide: true,
+                controlBar: {
+                    autoHideTimeout: 3,
+                    animated: true,
+                    autoHide: true
+                },
+                htmlOnPauseBlock: {
+                    html: null,
+                    height: null,
+                    width: null
+                },
                 autoPlay: false,
                 mute: false,
                 allowTheatre: true,
@@ -41,16 +60,28 @@
                 playbackRateEnabled: false,
                 allowDownload: false,
                 playButtonShowing: false,
-                fillToContainer: false,
+                fillToContainer: true, // Set to true for full container usage
                 posterImage: "https://i.ytimg.com/vi/fMV3S0f9RL4/hq720.jpg"
+            },
+            vastOptions: {
+                adList: [],
+                adCTAText: false,
+                adCTATextPosition: ""
             }
         });
 
-        var myFPHamza = fluidPlayer('hamza', {
+        var myFHamza = fluidPlayer('hamza', {
             layoutControls: {
-                autoHideTimeout: 3,
-                animated: true,
-                autoHide: true,
+                controlBar: {
+                    autoHideTimeout: 3,
+                    animated: true,
+                    autoHide: true
+                },
+                htmlOnPauseBlock: {
+                    html: null,
+                    height: null,
+                    width: null
+                },
                 autoPlay: false,
                 mute: false,
                 allowTheatre: true,
@@ -58,11 +89,15 @@
                 playbackRateEnabled: false,
                 allowDownload: false,
                 playButtonShowing: false,
-                fillToContainer: false,
+                fillToContainer: true, // Set to true for full container usage
                 posterImage: "https://i.ytimg.com/vi/eOy6aj012uQ/hq720.jpg"
+            },
+            vastOptions: {
+                adList: [],
+                adCTAText: false,
+                adCTATextPosition: ""
             }
         });
     </script>
-
 </body>
 </html>
