@@ -12,24 +12,21 @@
             font-family: Verdana, sans-serif;
             text-align: center;
         }
-        video {
-            width: 100%;
-            max-width: 720px;
-            margin: 20px 0;
-        }
+        
     </style>
 </head>
 <body>
-
+	
     <h2>Deep Confessions Podcast - Leith Boulares</h2>
+    <div class="container" align="center">
     <video id="leith" controls>
         <source src="https://ba9chich.media/hls/74d0debe401f931a1e1c0f441a88da6e122a4d871c2e5535574327b5e63193b7/master.m3u8" type="application/x-mpegURL" />
-    </video>
-
+    </video></div>
     <h2>Deep Confessions Podcast - Hamza Bouchnak </h2>
+    <div class="container" align="center">
     <video id="hamza" controls>
         <source src="https://ba9chich.media/hls/af04a3f351fcd13bdfcf3051997420b229ae2d4285bf89ed0d6c0b38ce6402e4/master.m3u8" type="application/x-mpegURL" />
-    </video>
+    </video><div class="container">
 
     <script>
         var myFPLeith = fluidPlayer('leith', {
